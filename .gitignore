@@ -12,8 +12,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # Environment variables
-.env
-.env.* 
+# .env
+# .env.* 
 
 # IDE files (specific to various IDEs)
 .vscode/
