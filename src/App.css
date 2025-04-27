@@ -1,0 +1,144 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container for the entire app */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f7fb;
+}
+
+/* Main box holding the form and output */
+.box {
+  width: 90%;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Heading for the test case output */
+h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Form container */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Textarea for code input */
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* File input */
+input[type="file"] {
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+/* Button */
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+/* Output Box */
+.output-box {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  min-height: 100px;
+  display: none;
+  max-height: 300px;
+  overflow-y: auto;
+  font-family: 'Courier New', Courier, monospace; /* Ensuring monospace font for proper indentation */
+  white-space: pre-wrap; /* Preserve whitespace and line breaks */
+}
+
+.output-box.show {
+  display: block;
+}
+
+/* Error box */
+.error {
+  color: red;
+  font-size: 14px;
+  background-color: #fdd;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid red;
+}
+
+.error.show {
+  display: block;
+}
+
+/* Loading state */
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+textarea,
+input[type="file"] {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+/* Styling the placeholder text */
+textarea::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
